@@ -1,0 +1,169 @@
+/* ============================================================
+   GLOBAL RESET + CSS VARIABLES
+   (loaded once via main.jsx — every component CSS file below
+   can use these variables)
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --sidebar-w: 240px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --border: #e3e5f2;
+  --bg: #eef0f6;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --indigo: #4f46e5;
+  --indigo-light: #6366f1;
+}
+
+body {
+  min-width: 320px;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 999px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--indigo-light);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ============================================================
+   SHARED PRIMITIVES
+   Used by StatCard, ApplicationOverview, UpcomingInterviews,
+   RecentApplications, QuickActions, and the Dashboard's own
+   metric boxes — kept here once instead of repeated in every
+   component's CSS file.
+   ============================================================ */
+.panel {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 14px 28px -18px rgba(79, 70, 229, 0.22);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.panel:hover {
+  border-color: #cfd2ec;
+  box-shadow: 0 4px 16px -6px rgba(79, 70, 229, 0.2), 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.panel-padded {
+  padding: 20px;
+}
+
+.panel-padded-lg {
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .panel-padded-lg {
+    padding: 24px;
+  }
+}
+
+.icon-badge {
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.badge-indigo { background: #4f46e5; }
+.badge-amber  { background: #f59e0b; }
+.badge-purple { background: #9333ea; }
+.badge-emerald{ background: #10b981; }
+.badge-blue   { background: #3b82f6; }
+.badge-cyan   { background: #06b6d4; }
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.card-subtitle {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.card-select {
+  border-radius: var(--radius-sm);
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  outline: none;
+}
+
+.card-link {
+  background: none;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--indigo);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+  }
+}
