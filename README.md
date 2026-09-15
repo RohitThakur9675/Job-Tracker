@@ -1,16 +1,66 @@
-# React + Vite
+# 💼 JobTrack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive job application tracker built with React and Vite.
 
-Currently, two official plugins are available:
+JobTrack helps users organize and monitor their job applications, interviews, and offers in one place.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 📊 Dashboard for tracking job applications
+- 💼 Job application tracking
+- 📌 Application status management
+- 🎯 Active applications overview
+- 📅 Interview tracking
+- 🏆 Offer tracking
+- 📱 Responsive user interface
+- 🎨 Clean and modern dashboard design
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+- Lucide React
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎯 Why I Built This
+
+I built JobTrack as a practical React project to improve my frontend development skills and learn how to structure a real-world application.
+
+The goal is to make job searching more organized by providing a single place to manage applications and track their progress.
+
+## 📚 What I Learned
+
+- Building reusable React components
+- Managing UI state with React
+- Structuring React projects
+- Creating responsive layouts with CSS
+- Designing dashboard interfaces
+- Using Git and GitHub for version control
+
+## 🚧 Current Status
+
+JobTrack is currently under active development.
+
+The dashboard UI and initial functionality are implemented. More features will be added as development continues.
+
+## 🚀 Future Improvements
+
+- Add, edit and delete job applications
+- Search and filter applications
+- Backend integration
+- MongoDB database
+- User authentication
+- Interview scheduling
+- Application analytics
+- Notifications and reminders
+- Deployment
+
+## ⚙️ Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/RohitThakur9675/job-tracker.git
+```
