@@ -35,10 +35,6 @@ role-based access control.
 |---|---|
 | ![Job Search](screenshots/job-search.png) | ![Recruiter Profile](screenshots/recruiter-profile.png) |
 
-| Job Details | Job Seeker Profile |
-|---|---|
-| ![Job Details](screenshots/job-details.png) | ![Profile](screenshots/seeker-profile.png) |
-
 ---
 
 ## ✨ Features
