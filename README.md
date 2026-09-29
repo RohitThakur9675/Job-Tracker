@@ -27,9 +27,9 @@ role-based access control.
 |---|---|
 | ![Recruiter Dashboard](screenshots/recruiter-dashboard.png) | ![Job Seeker Dashboard](screenshots/seeker-dashboard.png) |
 
-| Applicants & Interview Scheduling | Candidate Profile |
+| Applicants & Interview Scheduling | 
 |---|---|
-| ![Applicants](screenshots/applicants.png) | ![Candidate Profile](screenshots/candidate-profile.png) |
+| ![Applicants](screenshots/applicants.png) | 
 
 | Job Search | Recruiter Profile |
 |---|---|
