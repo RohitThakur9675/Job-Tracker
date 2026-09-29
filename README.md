@@ -31,6 +31,10 @@ role-based access control.
 |---|---|
 | ![Applicants](screenshots/applicants.png) | ![Candidate Profile](screenshots/candidate-profile.png) |
 
+| Job Search | Recruiter Profile |
+|---|---|
+| ![Job Search](screenshots/job-search.png) | ![Recruiter Profile](screenshots/recruiter-profile.png) |
+
 | Job Details | Job Seeker Profile |
 |---|---|
 | ![Job Details](screenshots/job-details.png) | ![Profile](screenshots/seeker-profile.png) |
@@ -157,12 +161,17 @@ job/company browsing.
 
 1. Create a folder named `screenshots` in the repo root.
 2. Capture these pages (in order of impact for a recruiter skimming your repo):
-   - Recruiter Dashboard (`recruiter-dashboard.png`)
-   - Applicants page with a candidate open + status actions (`applicants.png`)
-   - Candidate full profile page (`candidate-profile.png`)
-   - Job Seeker Dashboard (`seeker-dashboard.png`)
-   - Job Details page (`job-details.png`)
-   - Job Seeker Profile — resume/education/skills/projects (`seeker-profile.png`)
+   - Recruiter Dashboard (`recruiter-dashboard.png`) ✅ done
+   - Applicants page with a candidate open + status actions (`applicants.png`) ✅ done
+   - Job Seeker Dashboard (`seeker-dashboard.png`) ✅ done
+   - Browse Jobs / search page (`job-search.png`) ✅ done
+   - Recruiter Profile — with photo upload (`recruiter-profile.png`) ✅ done
+   - **Still needed:** one individual job's Job Details page (`job-details.png`) — open any job
+     from Browse Jobs and screenshot that page, not the search list
+   - **Still needed:** Candidate's full profile page (`candidate-profile.png`) — from Applicants,
+     click a candidate's name/photo, then screenshot that page
+   - **Still needed:** Job Seeker's own Profile page — resume/education/skills/projects
+     (`seeker-profile.png`)
 3. Save each as a `.png`, exact filenames as above, into `screenshots/`.
 4. `git add screenshots && git commit -m "Add screenshots" && git push` — GitHub will render
    them in this README automatically, since the paths above are relative.
