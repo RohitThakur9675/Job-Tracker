@@ -1,0 +1,12 @@
+.admin-report-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+  color: #b45309;
+  font-size: 13.5px;
+}
+.admin-report-banner:hover {
+  border-color: #fde68a;
+  background: #fffbeb;
+}

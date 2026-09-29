@@ -1,0 +1,172 @@
+/* Structural fix: main content must clear the fixed sidebar on desktop. */
+.dashboard-content {
+  min-height: 100vh;
+}
+@media (min-width: 1024px) {
+  .dashboard-content {
+    margin-left: var(--sidebar-w);
+  }
+}
+
+/* Generic page wrapper used inside every dashboard page. */
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 20px 56px;
+}
+@media (min-width: 768px) {
+  .page { padding: 32px 32px 64px; }
+}
+.page-narrow {
+  max-width: 760px;
+}
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.page-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+.page-subtitle {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+.page-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+@media (min-width: 640px) {
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1024px) {
+  .stats-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .stats-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+.section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+
+.two-col-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: start;
+}
+@media (min-width: 960px) {
+  .two-col-layout { grid-template-columns: 2fr 1fr; }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 700px) {
+  .card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1024px) {
+  .card-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.filter-bar .form-input,
+.filter-bar .form-select {
+  width: auto;
+}
+.filter-search {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+}
+.filter-search svg {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+.filter-search input {
+  padding-left: 38px;
+}
+
+.list-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.loading-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  gap: 10px;
+}
+.loading-spinner-sm {
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid rgba(99, 102, 241, 0.2);
+  border-top-color: var(--indigo);
+  border-radius: 50%;
+  animation: jobtrack-spin 0.8s linear infinite;
+}
+
+html[data-theme="dark"] .page-title,
+html[data-theme="dark"] .section-title { color: var(--text-primary); }
+
+/* Simple "row" pattern shared by every dashboard's recent-activity lists. */
+.dash-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.dash-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.dash-row-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dash-row-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}

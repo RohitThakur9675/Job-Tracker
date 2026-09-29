@@ -1,0 +1,42 @@
+.job-details-header {
+  margin-bottom: 16px;
+}
+.job-details-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.job-details-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.job-details-company-link {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 13.5px;
+  color: var(--text-secondary);
+}
+.job-details-company-link:hover {
+  color: var(--indigo);
+}
+.job-details-status-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+.job-details-apply-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+.job-details-description {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+}

@@ -1,0 +1,39 @@
+.applicant-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 640px) {
+  .applicant-detail-grid.has-schedule,
+  .applicant-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.apps-detail-meta p {
+  font-size: 13.5px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.apps-detail-meta strong {
+  font-weight: 600;
+}
+.applicant-schedule-panel {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+.table-avatar-button { border:0; padding:0; cursor:pointer; font:inherit; }
+.profile-name-link { border:0; padding:0; background:none; color:var(--text-primary); font:inherit; font-weight:600; cursor:pointer; text-align:left; }
+.profile-name-link:hover { text-decoration:underline; }
+
+.applicant-actions {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.applicant-actions .btn-sm {
+  white-space: nowrap;
+}

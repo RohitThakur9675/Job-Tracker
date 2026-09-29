@@ -1,0 +1,5 @@
+.company-details-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}

@@ -1,0 +1,27 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 20px 0 4px;
+}
+.pagination button {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.pagination-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+html[data-theme="dark"] .pagination button { background: var(--surface); border-color: var(--border); color: var(--text-secondary); }

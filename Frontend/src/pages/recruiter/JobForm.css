@@ -1,0 +1,25 @@
+.tag-input-box .autocomplete {
+  flex: 1;
+  min-width: 220px;
+}
+.tag-input-box .autocomplete input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 13.5px;
+  padding: 4px;
+}
+.tag-input-box .autocomplete-chevron { display: none; }
+.tag-input-box .autocomplete-menu { left: -8px; right: -8px; top: calc(100% + 8px); }
+.autocomplete-leading-icon {
+  position: absolute;
+  z-index: 2;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+.autocomplete-leading-icon + .form-input { padding-left: 34px; }

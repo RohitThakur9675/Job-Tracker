@@ -1,0 +1,160 @@
+/* Shared form styles — labels, inputs, selects, textareas, validation state. */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 640px) {
+  .form-row.cols-2 { grid-template-columns: 1fr 1fr; }
+  .form-row.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+}
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.form-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: -2px;
+}
+.form-error {
+  font-size: 12px;
+  color: #dc2626;
+  margin-top: -2px;
+}
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 10px 13px;
+  font-size: 14px;
+  color: var(--text-primary);
+  outline: none;
+}
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #a5b4fc;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+.form-input.has-error,
+.form-select.has-error,
+.form-textarea.has-error {
+  border-color: #fca5a5;
+}
+.form-textarea {
+  resize: vertical;
+  min-height: 96px;
+  font-family: inherit;
+}
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+.form-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--text-secondary);
+}
+.form-checkbox-row input {
+  width: 16px;
+  height: 16px;
+}
+.form-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 28px 0 14px;
+}
+.form-section-title:first-child {
+  margin-top: 0;
+}
+.input-with-icon {
+  position: relative;
+}
+.input-with-icon svg {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+.input-with-icon .form-input {
+  padding-left: 38px;
+}
+.input-with-icon .input-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  padding: 4px;
+  pointer-events: auto;
+}
+
+/* Tag input used for skills / required skills */
+.tag-input-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-sm);
+  background: #fff;
+  padding: 8px;
+}
+.tag-input-box input {
+  flex: 1;
+  min-width: 120px;
+  border: none;
+  outline: none;
+  font-size: 13.5px;
+  padding: 4px;
+  background: transparent;
+  color: var(--text-primary);
+}
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--track-bg);
+  color: var(--text-secondary);
+  border-radius: 999px;
+  padding: 4px 6px 4px 10px;
+  font-size: 12px;
+}
+.tag-chip button {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  display: flex;
+  padding: 2px;
+}
+.tag-chip button:hover { color: #dc2626; }
+
+html[data-theme="dark"] .form-input,
+html[data-theme="dark"] .form-select,
+html[data-theme="dark"] .form-textarea,
+html[data-theme="dark"] .tag-input-box {
+  background: var(--surface-input);
+  border-color: var(--border);
+  color: var(--text-primary);
+}
+html[data-theme="dark"] .form-label { color: var(--text-secondary); }
+html[data-theme="dark"] .tag-chip { background: var(--surface-soft); }

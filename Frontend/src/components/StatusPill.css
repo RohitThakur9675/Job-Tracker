@@ -1,0 +1,22 @@
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.status-pill-blue { background: #e0e7ff; color: #4338ca; }
+.status-pill-purple { background: #f3e8ff; color: #7e22ce; }
+.status-pill-amber { background: #fef3c7; color: #b45309; }
+.status-pill-emerald { background: #d1fae5; color: #047857; }
+.status-pill-rose { background: #fee2e2; color: #b91c1c; }
+.status-pill-muted { background: #f1f3f8; color: #6b7280; }
+
+html[data-theme="dark"] .status-pill-blue { background: #1e2a5e; color: #a5b4fc; }
+html[data-theme="dark"] .status-pill-purple { background: #3b1f5e; color: #d8b4fe; }
+html[data-theme="dark"] .status-pill-amber { background: #4a3312; color: #fcd34d; }
+html[data-theme="dark"] .status-pill-emerald { background: #0d3b2e; color: #6ee7b7; }
+html[data-theme="dark"] .status-pill-rose { background: #4a1515; color: #fca5a5; }
+html[data-theme="dark"] .status-pill-muted { background: #242b38; color: #a8b0c0; }

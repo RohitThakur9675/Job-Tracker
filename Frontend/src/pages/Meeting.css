@@ -1,0 +1,200 @@
+.meeting-shell {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: #14161f;
+  color: #f4f5f9;
+  display: flex;
+  flex-direction: column;
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+}
+
+.meeting-center {
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  padding: 24px;
+}
+.meeting-center .empty-state-title,
+.meeting-center .empty-state-message {
+  color: #f4f5f9;
+}
+
+.meeting-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  flex-shrink: 0;
+}
+.meeting-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+.meeting-subtitle {
+  font-size: 12.5px;
+  color: #9ba0b3;
+  margin-top: 2px;
+}
+
+.meeting-status-badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #262a3a;
+  color: #c7cad6;
+  white-space: nowrap;
+}
+.meeting-status-connected {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+}
+.meeting-status-failed {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+}
+.meeting-status-reconnecting,
+.meeting-status-connecting {
+  background: rgba(234, 179, 8, 0.15);
+  color: #facc15;
+}
+
+.meeting-stage {
+  position: relative;
+  flex: 1;
+  margin: 0 12px 12px;
+  border-radius: var(--radius-lg, 16px);
+  background: #05060a;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.meeting-remote-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: #05060a;
+}
+
+.meeting-waiting {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #c7cad6;
+  font-size: 14px;
+}
+
+.meeting-local-pip {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 110px;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-md, 12px);
+  overflow: hidden;
+  background: #1c1f2b;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+.meeting-local-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1); /* mirror, like a camera app */
+}
+.meeting-local-camoff {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1c1f2b;
+  color: #9ba0b3;
+}
+.meeting-local-label {
+  position: absolute;
+  left: 6px;
+  bottom: 5px;
+  font-size: 10.5px;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.meeting-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px 20px calc(20px + env(safe-area-inset-bottom, 0px));
+  flex-shrink: 0;
+}
+.meeting-control-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: #262a3a;
+  color: #f4f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+.meeting-control-btn:hover {
+  background: #323649;
+}
+.meeting-control-btn.is-off {
+  background: #f4f5f9;
+  color: #14161f;
+}
+.meeting-leave-btn {
+  background: #ef4444;
+  width: 58px;
+}
+.meeting-leave-btn:hover {
+  background: #dc2626;
+}
+
+.meeting-spin {
+  animation: meeting-spin 0.9s linear infinite;
+}
+@keyframes meeting-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 520px) {
+  .meeting-local-pip {
+    width: 84px;
+  }
+}
+
+.meeting-bottom{position:relative;display:flex;justify-content:center;flex-shrink:0}
+.meeting-control-btn.is-share-on{background:#6366f1;color:#fff}
+.meeting-local-video.is-hidden-video{visibility:hidden}
+.meeting-audio-label{position:absolute;left:16px;top:16px;display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:999px;background:rgba(0,0,0,.48);font-size:11px;color:#fff;z-index:2}
+.meeting-share-label{position:absolute;top:6px;left:6px;right:6px;padding:5px 6px;background:rgba(99,102,241,.88);border-radius:6px;font-size:9px;display:flex;align-items:center;gap:4px;justify-content:center;z-index:2}
+.meeting-local-camoff{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:#1c1f2b;color:#c7cad6;font-size:9px}
+.meeting-waiting small{color:#747b91;max-width:320px;text-align:center;line-height:1.5}
+.meeting-chat{position:absolute;right:18px;bottom:84px;width:min(330px,calc(100vw - 36px));height:430px;max-height:60vh;background:#1a1d28;border:1px solid rgba(255,255,255,.1);border-radius:16px;box-shadow:0 18px 55px rgba(0,0,0,.4);display:flex;flex-direction:column;overflow:hidden;z-index:20}
+.meeting-chat-header{height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 13px;border-bottom:1px solid rgba(255,255,255,.08);font-size:13px}
+.meeting-chat-header button{border:0;background:transparent;color:#aeb4c5;cursor:pointer}
+.meeting-chat-messages{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
+.meeting-chat-empty{margin:auto;color:#777f95;text-align:center;font-size:12px}
+.meeting-chat-message{align-self:flex-start;max-width:84%;display:flex;flex-direction:column;gap:3px;background:#272c3b;padding:8px 10px;border-radius:12px 12px 12px 4px;font-size:12px;color:#edf0f7}
+.meeting-chat-message.mine{align-self:flex-end;background:#4f46e5;border-radius:12px 12px 4px 12px}
+.meeting-chat-message small{font-size:9px;color:#aeb4c5}
+.meeting-chat-message.mine small{color:#d8d9ff}
+.meeting-chat-form{display:flex;gap:7px;padding:10px;border-top:1px solid rgba(255,255,255,.08)}
+.meeting-chat-form input{min-width:0;flex:1;background:#10131b;border:1px solid #303547;color:#fff;border-radius:9px;padding:9px 10px;outline:none;font-size:12px}
+.meeting-chat-form button{width:36px;border:0;border-radius:9px;background:#6366f1;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.meeting-chat-form button:disabled{opacity:.4;cursor:not-allowed}
+@media(max-width:650px){.meeting-chat{bottom:76px;right:10px;width:calc(100vw - 20px)}.meeting-controls{gap:7px;padding-left:8px;padding-right:8px}.meeting-control-btn{width:44px;height:44px}.meeting-leave-btn{width:50px}.meeting-audio-label{display:none}}
